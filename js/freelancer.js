@@ -71,39 +71,5 @@
       $(this).removeClass("floating-label-form-group-with-focus");
     });
   });
-    
-  // image slide
-  $(document).ready(function(){
-      var imgs;
-      var img_count;
-      var img_position = 1;
-      
-      imgs = $(".slide ul");
-      img_count = imgs.children().length; //li(이미지)의 갯수
-      
-      $('#back').click(function(){
-          back();
-      });
-      $('#next').click(function(){
-          next();
-      });
-      
-      function back(){
-          if(1<img_position){
-              imgs.animate({
-                  left: '+=950px' //이미지의 width만큼 밀어 슬라이드처럼 보이게함
-              });
-              img_position--;
-          }
-      }
-      function next(){
-          if(img_count>img_position){
-              imgs.animate({
-                  left: '-=950px'
-              });
-              img_position++;
-          }
-      }
-  });
 
 })(jQuery); // End of use strict
